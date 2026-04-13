@@ -77,6 +77,77 @@
             z-index: 100;
             mix-blend-mode: difference;
         }
+     /* Card Comparison Layout */
+        .comparison-wrapper {
+            display: flex;
+            gap: 30px;
+            width: 80%;
+            max-width: 1200px;
+            position: relative;
+            z-index: 3;
+            flex-wrap: wrap;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease 0.5s;
+        }
+
+        /* Animate in like the other slides */
+        .swiper-slide-active .comparison-wrapper {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .compare-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            flex: 1;
+            min-width: 300px;
+            transition: transform 0.4s ease, background 0.4s ease;
+        }
+
+        .compare-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .card-fcp {
+            border-top: 4px solid #00ffcc;
+        }
+
+        .card-pp {
+            border-top: 4px solid #5a5a5a;
+        }
+
+        .compare-card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .compare-card ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .compare-card ul li {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #b0b0b0;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            line-height: 1.4;
+        }
+
+        .compare-card ul li i {
+            margin-top: 2px;
+        }
 
         .logo {
             font-family: 'Oswald', sans-serif;
@@ -337,9 +408,9 @@
 <div class="tags hoverable">
                         <span class="tag">Final Cut Pro 12</span>
                         <span class="tag">Color Grading</span>
-                        <span class="tag">Canva Pro</span>
+                        <span class="tag">Canva </span>
                         <span class="tag">Thumbnail Design</span>
-                        <span class="tag">Vlog editingr</span>
+                        <span class="tag"> Fast editingr</span>
                         <span class="tag">Engaging Video</span>
                         <span class="tag"> ACCESS Apple Creator Studio</span>
                     </div>
@@ -353,7 +424,7 @@
                     <span class="subtitle">My Philosophy</span>
                     <div class="review-box">
                         <p class="quote">"Editing isn't just about cutting clips together; it's about finding the rhythm of a story. I approach every project with a cinematic mindset, ensuring the final cut doesn't just look good, but makes the audience feel something."</p>
-                        <p class="author">— Anurag Kumar</p>
+                        
                     </div>
                 </div>
             </div>
@@ -371,6 +442,34 @@
                 </div>
             </div>
 
+   <div class="swiper-slide">
+                <img src=" https://images.unsplash.com/photo-1692607431259-951c39946cbf?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Editing Setup" class="bg-media">
+                <div class="overlay"></div>
+                
+                <div class="comparison-wrapper">
+                    <div class="compare-card card-pp hoverable">
+                        <h3>Premiere Pro</h3>
+                        <ul>
+                            <li><i class="ri-check-line" style="color: #5a5a5a;"></i> A solid choice for complex workflow</li>
+                            <li><i class="ri-check-line" style="color: #5a5a5a;"></i> Excellent versatility and integration with legacy tools.</li>
+                            <li><i class="ri-check-line" style="color: #5a5a5a;"></i> A reliable powerhouse for traditional post-production.</li>
+                        </ul>
+                        <p style="font-size: 0.9rem; color: #888; margin:0;">A fantastic tool for broad workflows, though heavier on render times for complex cinematic textures.</p>
+                    </div>
+
+                    <div class="compare-card card-fcp hoverable">
+                        <h3 style="color: #00ffcc;">Final Cut Pro 12</h3>
+                        <ul>
+                            <li><i class="ri-star-fill" style="color: #00ffcc;"></i> Unmatched rendering speed with Apple Creator Studio.</li>
+                            <li><i class="ri-star-fill" style="color: #00ffcc;"></i> Zero-lag playback for heavy 4K cinematic editing.</li>
+                            <li><i class="ri-star-fill" style="color: #00ffcc;"></i> Advanced magnetic timeline for fluid visual pacing.</li>
+                        </ul>
+                        <p style="font-size: 0.9rem; color: #fff; margin:0;"><strong>My Engine of Choice:</strong> Optimized for delivering the highest-quality, polished edits without technical bottlenecks.</p>
+                    </div>
+                </div>
+            </div>
+ 
+         
             <div class="swiper-slide">
                 <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Design and Writing" class="bg-media">
                 <div class="overlay"></div>
